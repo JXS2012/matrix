@@ -29,7 +29,7 @@ Matrix transposeMatrix(Matrix a);
 Matrix matrixSubtraction(Matrix a, Matrix b);
 Matrix matrixPlus(Matrix a, Matrix b);
 
-//Matrix normalizeMatrix(Matrix a);
+Matrix normalizeMatrix(Matrix a);
 
 float invSqrt(float x);
 

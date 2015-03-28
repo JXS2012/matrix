@@ -159,6 +159,10 @@ void printMatrix(Matrix a) {
 	printf("\n");
 }
 
+Matrix normalizeMatrix(Matrix a) {
+	return scalarMatrixProduct(invSqrt(norm2(a)), a);
+}
+
 float invSqrt(float x) {
 	float halfx = 0.5f * x;
 	float y = x;
@@ -169,7 +173,7 @@ float invSqrt(float x) {
 	return y;
 }
 
-int test() {
+int main() {
 	int row = 3;
 	int column = 3;
 	float *heada = (float *) malloc(sizeof(float) * row * column);
@@ -212,5 +216,7 @@ int test() {
 	f = matrixSubtraction(f,e);
 	printMatrix(f);
 
+	f = normalizeMatrix(f);
+	printMatrix(f);
 	return 0;
 }
